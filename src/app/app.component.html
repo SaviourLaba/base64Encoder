@@ -1,0 +1,5 @@
+<input type="text" [(ngModel)]="data" [disabled]="isProcessing">
+<button (click)="encode()" [disabled]="isProcessing">Convert</button>
+<button (click)="cancel()" *ngIf="isProcessing">Cancel</button>
+<br>
+<textarea rows="10" cols="50" readonly>{{ result }}</textarea>
